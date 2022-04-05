@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid-19 Report Using API</title>
+    <link rel="shortcut icon" href="https://covid19.ddc.moph.go.th/images/logo-ddc.png" type="image/x-icon" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Prompt:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/css/mdb.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="mt-5">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-6 mx-auto">
+                    <div class="text-center my-4">
+                        <h1>รายงานสถานการณ์ โควิด-19</h1>
+                        <h2>อัพเดทข้อมูลล่าสุด : <span id="date"></span> <span id="month"></span> <span id="year"></span></h2>
+                    </div>
+             
+                    <div class="card text-center text-white bg-danger mb-3">
+                        <div class="card-header" onmouseenter="this.innerHTML='Infected'" onmouseleave="this.innerHTML='ติดเชื้อ'">ติดเชื้อ</div>
+                        <div class="card-body">
+                          <h3 class="card-title"><span id="new_case"> Loading </span></h3>
+                          <p class="card-text text-white"><span onmouseenter="this.innerHTML='From Total'" onmouseleave="this.innerHTML='สะสม'">สะสม</span> <span id="total_case"> Loading </span></p>
+                        </div>
+                      </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <div class="card text-center text-white bg-success mb-3" >
+                        <div class="card-header" onmouseenter="this.innerHTML='Recovered'" onmouseleave="this.innerHTML='รักษาหายแล้ว'">รักษาหายแล้ว
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title"><span id="new_recovered"> Loading </span></h5>
+                          <p class="card-text text-white">จากทั้งหมด <span id="total_recovered"> Loading </span></p>
+                        </div>
+                      </div>
+                </div>
+                <!-- <div class="col-4"> -->
+                    <!-- <div class="card text-center text-white bg-info mb-3" >
+                        <div class="card-header">รักษาอยู่ใน รพ.</div>
+                        <div class="card-body">
+                          <h5 class="card-title">0</h5>
+                          <p class="card-text text-white">จากทั้งหมด</p>
+                        </div>
+                      </div> -->
+                <!-- </div> -->
+                <div class="col-6">
+                    <div class="card text-center text-white bg-secondary mb-3" >
+                        <div class="card-header"><span onmouseenter="this.innerHTML='Death'" onmouseleave="this.innerHTML='เสียชีวิต'">เสียชีวิต</span>
+                        </div>
+                        <div class="card-body">
+                          <h3 class="card-title"><span id="new_death"> Loading </span></h3>
+                          <p class="card-text text-white">จากทั้งหมด <span id="total_death"> Loading </span></p>
+                        </div>
+                      </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+
+    <div class="text-center">
+        <a href="https://www.damrongdhama.moi.go.th/home/covid">HTML Template</a>
+        , <a href="https://covid19.ddc.moph.go.th/api/Cases">API</a>
+        , <a href="https://ddc.moph.go.th/covid19-dashboard/">Dashboard</a>
+    </div>
+
+
+    <script src="app.js"></script>
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/js/mdb.min.js"></script>
+</body>
+</html>
+    <!-- <div>
+        <p>วันที่ <span id="date"></span> <span id="month"></span> <span id="year"></span></p>
+        <p>ผู้ติดเชื้อใหม่ : <span id="new_case" attribute="number"> Loading </span> <span class='unit'></span></p>
+        <p>ผู้ติดเชื้อทั้งหมดในประเทศ : <span id="total_case"> Loading </span> <span class='unit'></span></p>
+        <p>ผู้เสียชีวิตทั้งหมดในประเทศ : <span id="total_death"> Loading </span> <span class='unit'></span></p>
+        <p>รักษาหาย : <span id="new_recovered"> Loading </span> <span class='unit'></span></p>
+    </div> -->
+    
+    
+</body>
+</html>

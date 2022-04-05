@@ -1,0 +1,24 @@
+body {
+    font-family: 'Cookie', cursive;
+    font-family: 'Prompt', sans-serif !important;
+    background-image: url(https://saiplatform.org/wp-content/uploads/2020/05/background-c19.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+h1, h2 {
+    color: white;
+}
+div {
+    margin-bottom: 1vh;
+}
+.card-header {
+    font-size: 5.5vh !important;
+}
+.card-title {
+    font-size: 5vh !important;
+}
+a {
+    color: white !important;
+}
