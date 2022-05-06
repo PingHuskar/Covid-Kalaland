@@ -13,7 +13,7 @@ function showData(data) {
     // document.getElementById("month").innerHTML = parseInt(today[1]);
     document.getElementById("month").innerHTML = th_month[parseInt(today[1])-1];
     document.getElementById("date").innerHTML = parseInt(today[2]);
-    document.getElementById("new_case").innerHTML = query['new_case'];
+    document.getElementById("new_case").innerHTML = `${query['new_case'] - Math.round(Math.sqrt(query['new_case'])*1.96)} - ${query['new_case'] + Math.round(Math.sqrt(query['new_case'])*1.96)}`;
     document.getElementById("total_case").innerHTML = query['total_case'];
     document.getElementById("new_death").innerHTML = query['new_death'];
     document.getElementById("total_death").innerHTML = query['total_death'];
