@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Covid-19 Report Using API</title>
+    <title>รายงานโควิด-๑๙</title>
     <link rel="shortcut icon" href="https://covid19.ddc.moph.go.th/images/logo-ddc.png" type="image/x-icon" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,15 +28,15 @@
             <div class="row">
                 <div class="col-6 mx-auto">
                     <div class="text-center my-4">
-                        <h1>รายงานสถานการณ์ โควิด-19</h1>
-                        <h2>อัพเดทข้อมูลล่าสุด : <span id="date"></span> <span id="month"></span> <span id="year"></span></h2>
+                        <h1>รายงานสถานการณ์ โควิด-๑๙</h1>
+                        <h2><span id="date"></span> <span id="month"></span> <span id="year"></span></h2>
                     </div>
              
                     <div class="card text-center text-white bg-danger mb-3">
-                        <div class="card-header" onmouseenter="this.innerHTML='Infected'" onmouseleave="this.innerHTML='ติดเชื้อ'">ติดเชื้อ</div>
+                        <div class="card-header">ติดเชื้อ</div>
                         <div class="card-body">
-                          <h3 class="card-title"><span id="new_case"> <span onmouseenter="this.innerHTML='Error'" onmouseleave="this.innerHTML='Loading'">Loading</span> </span></h3>
-                          <p class="card-text text-white"><span onmouseenter="this.innerHTML='From Total'" onmouseleave="this.innerHTML='สะสม'">สะสม</span> <span id="total_case"> <span onmouseenter="this.innerHTML='Error'" onmouseleave="this.innerHTML='Loading'">Loading</span> </span></p>
+                          <h3 class="card-title"><span id="new_case"> <span>ขอเวลาอีกไม่นาน</span> </span></h3>
+                          <p class="card-text text-white"><span>สะสม</span> <span id="total_case"> <span>ขอเวลาอีกไม่นาน</span> </span></p>
                         </div>
                       </div>
                 </div>
@@ -45,30 +45,20 @@
             <div class="row">
                 <div class="col-6">
                     <div class="card text-center text-white bg-success mb-3" >
-                        <div class="card-header" onmouseenter="this.innerHTML='Recovered'" onmouseleave="this.innerHTML='รักษาหายแล้ว'">รักษาหายแล้ว
-                        </div>
+                        <div class="card-header">รักษาหายแล้ว</div>
                         <div class="card-body">
-                          <h5 class="card-title"><span id="new_recovered"> <span onmouseenter="this.innerHTML='Error'" onmouseleave="this.innerHTML='Loading'">Loading</span> </span></h5>
-                          <p class="card-text text-white">จากทั้งหมด <span id="total_recovered"> <span onmouseenter="this.innerHTML='Error'" onmouseleave="this.innerHTML='Loading'">Loading</span> </span></p>
+                          <h5 class="card-title"><span id="new_recovered"> <span>ขอเวลาอีกไม่นาน</span> </span></h5>
+                          <p class="card-text text-white">จากทั้งหมด <span id="total_recovered"> <span>ขอเวลาอีกไม่นาน</span> </span></p>
                         </div>
                       </div>
                 </div>
-                <!-- <div class="col-4"> -->
-                    <!-- <div class="card text-center text-white bg-info mb-3" >
-                        <div class="card-header">รักษาอยู่ใน รพ.</div>
-                        <div class="card-body">
-                          <h5 class="card-title">0</h5>
-                          <p class="card-text text-white">จากทั้งหมด</p>
-                        </div>
-                      </div> -->
-                <!-- </div> -->
                 <div class="col-6">
                     <div class="card text-center text-white bg-secondary mb-3" >
-                        <div class="card-header"><span onmouseenter="this.innerHTML='Death'" onmouseleave="this.innerHTML='เสียชีวิต'">เสียชีวิต</span>
+                        <div class="card-header"><span>เสียชีวิต</span>
                         </div>
                         <div class="card-body">
-                          <h3 class="card-title"><span id="new_death"> <span onmouseenter="this.innerHTML='Error'" onmouseleave="this.innerHTML='Loading'">Loading</span> </span></h3>
-                          <p class="card-text text-white">จากทั้งหมด <span id="total_death"> <span onmouseenter="this.innerHTML='Error'" onmouseleave="this.innerHTML='Loading'">Loading</span> </span></p>
+                          <h3 class="card-title"><span id="new_death"> <span>ขอเวลาอีกไม่นาน</span> </span></h3>
+                          <p class="card-text text-white">จากทั้งหมด <span id="total_death"> <span>ขอเวลาอีกไม่นาน</span> </span></p>
                         </div>
                       </div>
                 </div>
@@ -79,9 +69,9 @@
     
 
     <div class="text-center">
-        <a href="https://www.damrongdhama.moi.go.th/home/covid">HTML Template</a>
-        , <a href="https://covid19.ddc.moph.go.th/api/Cases">API</a>
-        , <a href="https://ddc.moph.go.th/covid19-dashboard/">Dashboard</a>
+        <a href="https://www.damrongdhama.moi.go.th/home/covid">เทมเพลต</a>
+        , <a href="https://covid19.ddc.moph.go.th/api/Cases">เอพีไอ</a>
+        , <a href="https://ddc.moph.go.th/covid19-dashboard/">แดชบอร์ด</a>
     </div>
 
 
@@ -98,10 +88,10 @@
 </html>
     <!-- <div>
         <p>วันที่ <span id="date"></span> <span id="month"></span> <span id="year"></span></p>
-        <p>ผู้ติดเชื้อใหม่ : <span id="new_case" attribute="number"> Loading </span> <span class='unit'></span></p>
-        <p>ผู้ติดเชื้อทั้งหมดในประเทศ : <span id="total_case"> Loading </span> <span class='unit'></span></p>
-        <p>ผู้เสียชีวิตทั้งหมดในประเทศ : <span id="total_death"> Loading </span> <span class='unit'></span></p>
-        <p>รักษาหาย : <span id="new_recovered"> Loading </span> <span class='unit'></span></p>
+        <p>ผู้ติดเชื้อใหม่ : <span id="new_case" attribute="number"> ขอเวลาอีกไม่นาน </span> <span class='unit'></span></p>
+        <p>ผู้ติดเชื้อทั้งหมดในประเทศ : <span id="total_case"> ขอเวลาอีกไม่นาน </span> <span class='unit'></span></p>
+        <p>ผู้เสียชีวิตทั้งหมดในประเทศ : <span id="total_death"> ขอเวลาอีกไม่นาน </span> <span class='unit'></span></p>
+        <p>รักษาหาย : <span id="new_recovered"> ขอเวลาอีกไม่นาน </span> <span class='unit'></span></p>
     </div> -->
     
     
