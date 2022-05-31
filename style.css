@@ -6,6 +6,7 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    user-select : none;
 }
 h1, h2 {
     color: white;
